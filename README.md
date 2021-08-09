@@ -1,2 +1,1 @@
-# Natejoestev.github.io
-My site
+redirect: /index.html
