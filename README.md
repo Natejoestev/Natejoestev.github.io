@@ -1,1 +1,3 @@
+---
 redirect: /index.html
+---
