@@ -13,8 +13,9 @@
   <script>
     function load() {
       var gamesDIV = document.getElementById("games");
+      gamesDIV.innerHTML += "<br><h1>Games:<h1>";
       for (var game in GAMES) {
-        gamesDIV.innerHTML += "<a href=\"" +GAMES[game]+ "\">" +game+ "</a>"
+        gamesDIV.innerHTML += "<a href=\"" +GAMES[game]+ "\">" +game+ "</a>";
       }
       
       /*var url = document.URL;
