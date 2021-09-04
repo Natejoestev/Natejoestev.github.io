@@ -3,7 +3,22 @@
     <title>Natejoestev | Bdocs</title>
   </head>
   
-  <body onLoad="console.log(document.URL)">
+  <body onLoad="load();">
     <a href="https://natejoestev.github.io">Home</a>
   </body>
+  
+  <script>
+    function load() {
+      var url = document.URL;
+      var URLP = url.replace("https://natejoestev.github.io/bdocs", "");
+      URLP = URLP.split("=")
+      URL_PARAMS = {};
+      for (i in [...Array(URLP.length/2).keys()]) {
+        var key = URLP[i];
+        var value = URLPp[i*2];
+        URL_PARAMS[key] = value;
+      }
+      console.log(URL_PARAMS);
+    }
+  </script>
 </html>
