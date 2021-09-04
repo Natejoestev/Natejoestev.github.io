@@ -1,17 +1,25 @@
 <html>
   <head>
     <title>Natejoestev | Bdocs</title>
+    
+    <script src="https://natejoestev.github.io/bdocs/games.json"></script>
   </head>
   
   <body onLoad="load();">
     <a href="https://natejoestev.github.io">Home</a>
+    <div id="games"></div>
   </body>
   
   <script>
     function load() {
+      var gamesDIV = document.getElementById("games");
+      for (var game in GAMES) {
+        gamesDiv.innerHTML += "<a href=\"" +GAMES[game]+ "\">" +game+ "</a>"
+      }
+      
       var url = document.URL;
       var URLP = url.replace("https://natejoestev.github.io/bdocs", "");
-      URLP = URLP.split("=")
+      URLP = URLP.split("=");
       URL_PARAMS = {};
       for (i in [...Array(URLP.length/2).keys()]) {
         var key = URLP[i];
